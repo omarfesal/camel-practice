@@ -8,7 +8,7 @@
 //import org.springframework.stereotype.Component;
 //
 //@Component
-//public class TriggerSchdeuler extends RouteBuilder {
+//public class TriggerScheduler extends RouteBuilder {
 //    @Autowired
 //    CampaignRepository campaignRepository;
 //
@@ -27,4 +27,4 @@
 //    }
 //}
 //
-//
+

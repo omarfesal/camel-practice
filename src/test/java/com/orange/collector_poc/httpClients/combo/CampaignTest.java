@@ -3,11 +3,9 @@ package com.orange.collector_poc.httpClients.combo;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.test.junit4.CamelTestSupport;
-import org.junit.Test;
-import org.springframework.stereotype.Component;
+import org.junit.jupiter.api.Test;
 
-@Component
-public class CampaignTests extends CamelTestSupport {
+public class CampaignTest extends CamelTestSupport {
 
     public class ChildCampaignRepository extends CamelTestSupport {
         @Override

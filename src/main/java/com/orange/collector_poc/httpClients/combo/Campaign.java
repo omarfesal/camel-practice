@@ -18,17 +18,17 @@ public class Campaign extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        from("seda:requestGetCampaignResult?concurrentConsumers=5")
+        from("direct:requestGetCampaignResult")
                 .routeId("get-campaign-result-route")
-                .tracing()
-                .log("=================================== Start call combo =================================")
-                .log("{{combo.token}}")
+//                .tracing()
+//                .log("=================================== Start call combo =================================")
+//                .log("{{combo.token}}")
                 .setHeader(Exchange.HTTP_METHOD, constant(HttpMethods.GET))
                 .setHeader("Authorization", constant("{{combo.token}}") )
                 .toD("{{combo.base_url}}/bot-management/getCampaign?campaignID=${body}")
-                .tracing()
-                .log("combo result ${body}")
-                .log("==================================== End Call Combo ============================================")
+//                .tracing()
+//                .log("combo result ${body}")
+//                .log("==================================== End Call Combo ============================================")
                 .to("direct:getCampaignResult");
     }
 }

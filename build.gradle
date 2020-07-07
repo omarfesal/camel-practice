@@ -38,4 +38,22 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+	afterSuite { suite, result ->
+		result
+	}
 }
+
+sourceSets {
+	test {
+		java {
+			srcDir 'test/java'
+		}
+	}
+}
+
+//test {
+//	afterSuite { suite, result ->
+//		result
+//	}
+//}
+//sourceSets.test.java.srcDirs = ['test/java']

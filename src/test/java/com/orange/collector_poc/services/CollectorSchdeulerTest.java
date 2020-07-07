@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 @SpringBootTest
-public class CollectorSchdeulerTests {
+public class CollectorSchdeulerTest {
 
     @Test
     void testSchdeuler() {
